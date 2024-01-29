@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.root-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.circle-container {
+    /* scale: 2 ; */
+    margin: auto;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: wheat;
+    /* transition: all 2s; */
+}
+
+
+#second-kata,
+#minute-kata,
+#hour-kata {
+    width: 2px;
+    height: 90px;
+    background-color: black;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform-origin: bottom;
+    border-radius: 20px;
+    /* transition: rotate 60s infinite linear; */
+    transition: rotate 1s;
+    transition-timing-function: linear;
+    
+
+    /* rotate: 4deg; */
+}
+
+#second-kata {
+    transform: translate(0,20px);
+}
+
+#minute-kata {
+    width: 4px;
+    height: 70px;
+    top: 30px;
+
+}
+
+#hour-kata {
+    width: 6px;
+    height: 60px;
+    top: 40px;
+
+}
+
+#num-container {
+    height: inherit;
+    width: inherit;
+    position: relative;
+    left: 49.5%;
+    
+
+    & .marks,
+    & .nums {
+        position: absolute;
+        transform-origin: bottom;
+        width: 1px;
+
+    }
+}
+
+.nums {
+    top: 2px;
+    height: 98px;
+}
+
+.marks {
+    height: 100px;
+}
+
+.nums p {
+    position: absolute;
+        top: 4px;
+
+}
+
+.marks p {
+    position: absolute;
+}
+
+.spot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    margin: auto;
+    position: absolute;
+
+}
+
+/* .char-1 {
+    position: absolute;
+    left: 50%;
+    transform-origin: bottom;
+    width: 1px;
+    height: 100px;
+    rotate: 30deg;
+
+    &  p {
+        rotate: -30deg;
+    }
+} */
+
+
