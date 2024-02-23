@@ -4,21 +4,24 @@ var hourKata = document.getElementById("hour-kata");
 
 var time = new Date();
 var seconds = time.getSeconds();
+var minutes = time.getMinutes();
+var hours = time.getHours();
+
 secondKata.style.rotate = `${6 * seconds}deg`;
+hourKata.style.rotate = `${30 * hours + 0.5 * minutes}deg`;
 
-
+var s = seconds;
+var m = 6 * minutes + 0.1 * seconds
+var h = 30 * hours + 0.5 * minutes;
 setInterval(function () {
-    var time = new Date();
-    var minutes = time.getMinutes();
-    var hours = time.getHours();
 
-    secondKata.style.rotate = `${6 * seconds}deg`;
-    // minuteKata.style.rotate = `${6 * minutes}deg`;
-    minuteKata.style.rotate = `${6 * minutes}deg`;
-
-    console.log(minutes);
-    hourKata.style.rotate = `${(hours + 30) + (minutes / 2)}deg`;
-    seconds += 1;
+    secondKata.style.rotate = `${6 * s}deg`;
+    minuteKata.style.rotate = `${m}deg`;
+    hourKata.style.rotate = `${h}deg`;
+    console.log(h);
+    s += 1;
+    m += 0.1;
+    h += 0.00833333333333333333333333333333;
 }, 1000);
 
 // aakde
@@ -52,7 +55,6 @@ for (let i = 1; i <= 12; i++) {
     angle += 30;
 
 }
-
 
 // marks
 
